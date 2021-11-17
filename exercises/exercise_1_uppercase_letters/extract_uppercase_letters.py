@@ -13,4 +13,16 @@ Wskazówki:
 
 
 def extract_uppercase_letters(sentence):
-    pass
+    upper_letters = ''
+    for char in sentence:
+        if char.isupper():
+            upper_letters += char
+    return upper_letters
+
+
+if __name__ == '__main__':
+    result = extract_uppercase_letters(sentence='Ala Ma Kota')
+    print(result)  # -> AMK
+
+    result = extract_uppercase_letters(sentence='ALA Ma koTa')
+    print(result)  # -> ALAMT
