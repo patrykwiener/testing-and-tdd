@@ -20,8 +20,8 @@ def test_empty_string():
 
 
 def test_sentence_with_uppercase_letters():
-    sentence = 'Ala Ma Kota'
-    expected = 'AMK'
+    sentence = 'Ala Ma Kota a Kota ma Ale'
+    expected = 'AMKKA'
 
     result = extract_uppercase_letters(sentence=sentence)
 
