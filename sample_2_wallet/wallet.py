@@ -5,7 +5,9 @@ class InsufficientAmount(Exception):
 class Wallet:
 
     def __init__(self, amount=0):
-        pass
+        self.balance = 0  # public
+        self._balance = 0  # protected
+        self.__balance = 0  # protected
 
     def _validate_operation(self, spending):
         pass
@@ -18,4 +20,3 @@ class Wallet:
 
     def get_balance(self):
         pass
-
