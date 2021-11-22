@@ -7,7 +7,7 @@ class Wallet:
     def __init__(self, amount=0):
         self.balance = 0  # public
         self._balance = 0  # protected
-        self.__balance = 0  # protected
+        self.__balance = 0  # private
 
     def _validate_operation(self, spending):
         pass
