@@ -43,3 +43,10 @@ class TestWallet:
     def test_spend_cash_raises_exception_on_insufficient_amount(self):
         with pytest.raises(InsufficientAmountError):
             self.empty_wallet.spend_cash(spending=self.SPENDING)
+
+    def test_wallet_transaction(self):
+        """
+        add_cash
+        spend_cash
+        assert
+        """
