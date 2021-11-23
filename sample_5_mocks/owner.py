@@ -16,18 +16,28 @@ from sample_5_mocks.wallet import Wallet
 class Owner:
 
     def __init__(self, first_name, last_name, wallet: Wallet):
-        pass
+        self.first_name = first_name
+        self.last_name = last_name
+        self._wallet = wallet
 
     def supply_wallet(self, cash):
-        pass
+        self._wallet.add_cash(cash=cash)
 
     def withdraw_money(self, amount):
-        pass
+        self._wallet.spend_cash(spending=amount)
 
     def check_if_can_afford(self, amount):
-        pass
+        return self._wallet.get_balance() >= amount
 
 
 if __name__ == '__main__':
     wallet = Wallet()
     owner = Owner(first_name='Ala', last_name='Makota', wallet=wallet)
+
+    owner.supply_wallet(cash=10)
+    owner.withdraw_money(amount=5)
+
+    print(owner.check_if_can_afford(amount=10))
+    print(owner.check_if_can_afford(amount=5))
+
+    t = 0
