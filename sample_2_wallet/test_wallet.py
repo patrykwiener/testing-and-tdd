@@ -44,9 +44,22 @@ class TestWallet:
         with pytest.raises(InsufficientAmountError):
             self.empty_wallet.spend_cash(spending=self.SPENDING)
 
-    def test_wallet_transaction(self):
+    @pytest.mark.parametrize(
+        'cash,spending,expected',
+        [
+            [20, 10, 10],
+            [10, 10, 0],
+            [0, 0, 0],
+        ]
+    )
+    def test_wallet_transaction(self, cash, spending, expected):
         """
         add_cash
         spend_cash
         assert
         """
+        self.empty_wallet.add_cash(cash=cash)
+        self.empty_wallet.spend_cash(spending=spending)
+        result = self.empty_wallet.get_balance()
+
+        assert expected == result
