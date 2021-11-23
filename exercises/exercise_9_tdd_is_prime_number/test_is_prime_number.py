@@ -1,5 +1,7 @@
 import pytest
 
+from exercises.exercise_9_tdd_is_prime_number.is_prime_number import is_prime_number
+
 
 class TestIsPrimeNumber:
 

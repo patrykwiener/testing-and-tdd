@@ -8,6 +8,7 @@ Naszym zadaniem jest rozwinąć funkcjalność klasy GuestList o możliwość za
 * Zalecam otwarcie pliku w trybie 'w' oraz użycie metody pliku writelines(), która przyjmuje
   listę stringów do zapisu
 
+!!! W TESTACH UWAGA NA PATCH !!! POZIOM ROZSZERZONY !!!
 """
 
 

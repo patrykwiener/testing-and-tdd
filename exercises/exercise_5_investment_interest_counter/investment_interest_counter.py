@@ -26,15 +26,7 @@ class DurationLessThenZero(Exception):
 
 class InvestmentInterestCounter:
     def __init__(self, interest_rate, balance):
-        self._interest_rate = interest_rate
-        self._balance = balance
+        pass
 
     def count_with_yearly_capitalization(self, duration):
-        if duration < 0:
-            raise DurationLessThenZero('Podano liczbę lat mniejszą od zera')
-        else:
-            balance = self._balance
-            while duration > 0:
-                balance += balance * self._interest_rate
-                duration -= 1
-            return balance
+        pass
