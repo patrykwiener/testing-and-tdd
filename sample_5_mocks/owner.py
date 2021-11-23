@@ -1,3 +1,5 @@
+from sample_5_mocks.wallet import Wallet
+
 
 class Owner:
 
@@ -14,3 +16,6 @@ class Owner:
         pass
 
 
+if __name__ == '__main__':
+    wallet = Wallet()
+    owner = Owner(first_name='Ala', last_name='Makota', wallet=wallet)
